@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="gray-background">
       <img src ={logo} lat = 'logo'/>
-      <h2> Let's develop managemnt system!</h2>
+      <h2> Let's develop managemnt system!!!!</h2>
     </div>
   );
 }
