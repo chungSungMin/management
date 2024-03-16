@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Customer from './components/Customer';
+import { Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material';
 
 function App() {
 
@@ -29,11 +30,22 @@ function App() {
 
 
   return (
-    <div>
-
+    <Table>
+      <TableHead>
+        <TableRow>
+          <TableCell>번호</TableCell>
+          <TableCell>이미지</TableCell>
+          <TableCell>이름</TableCell>
+          <TableCell>생년월일</TableCell>
+          <TableCell>성별</TableCell>
+          <TableCell>직업</TableCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
       {
         customers.map(c =>{
           return(
+      
             <Customer
               key = {c.id}
               id = {c.id}
@@ -46,8 +58,8 @@ function App() {
           )
         })
       }
-
-    </div>
+      </TableBody>
+    </Table>
     );
 }
 
